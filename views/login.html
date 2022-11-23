@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>用户登录</title>
+	</head>
+	<body>
+		<div class="header">
+			<span>用户登录</span>
+		</div>
+	<form action="/login" method="get">
+		<div class="login-box" >
+			<ul>
+				<li>
+					<span class="login-name" ><i class="iconfont icon-user"></i></span>
+					<input type="text" name="username" id="username" placeholder="请输入用户名" />   
+				</li>
+				<li>
+					<span class="login-psw"><i class="iconfont icon-psw"></i></span>
+					<input type="password" name="password" id="password" placeholder="请输入密码" />  
+				</li>
+				<li>
+					<input type="text" id="input" onblur="out()" placeholder="请输入验证码">
+            		<span id="msg" name="msg" onclick="show()">点击刷新</span>
+				</li>
+			</ul>
+		</div>
+		<div class="confirm">
+			<input type="submit" value="登录" id="login"/>
+			<a href="/register">注册</a>
+		</div>
+	</form>
+</body>
+	<script src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</html>

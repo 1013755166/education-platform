@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css"/>
+  <title>资料下载</title>
+	<body style="background: #eee;">
+		<div class="header">
+				<span>资料下载</span>
+			</div>
+		<div class="banner">
+			<img src="img/self-report.png">
+		</div>
+		<form action="/upload" method="post" enctype='multipart/form-data'>
+			<label for="resource">上传文档</label>
+			<input type="file" name="myfile">
+			<button type="submit">上传文件</button>
+		</form>
+		
+		<hr>
+    
+		<!-- 文件列表 -->
+		<div style="color: blue;">
+		  <%= msg %>
+		</div>
+		<ul>
+		  <% list.forEach(function(item){ %>
+			<li style="margin: 10px 0px;">
+			  <%=item%> &nbsp;
+			  <a href="javascript:del('<%=item%>');">删除</a> &nbsp;
+			  <a href="javascript:down('<%=item%>');">下载</a>
+			</li>
+		  <% }) %>
+		</ul>
+
+			<ul class="data-content">
+				<a href="/material">
+				<li class="notice-list">
+					<h3 class="list-tit">2022-03-02</h3>
+				    <p class="list-txt">
+                                          学习资料免费分享
+				    </p>
+				</li>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+				<a href="/material">
+				<li class="notice-list">
+					<h3 class="list-tit">2022-03-02</h3>
+				    <p class="list-txt">
+                                            学习资料免费分享
+				    </p>
+				</li>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+				<a href="/material">
+				<li class="notice-list">
+					<h3 class="list-tit">2022-03-02</h3>
+				    <p class="list-txt">
+                                             学习资料免费分享
+				    </p>
+				</li>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+				<a href="/material">
+				<li class="notice-list">
+					<h3 class="list-tit">2022-03-02</h3>
+				    <p class="list-txt">
+                                            学习资料免费分享
+				    </p>
+				</li>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+				<a href="/material">
+				<li class="notice-list">
+					<h3 class="list-tit">2022-03-02</h3>
+				    <p class="list-txt">
+                                             学习资料免费分享
+				    </p>
+				</li>
+				<span class="goin"><i class="iconfont icon-right"></i></span>
+				</a>
+			</ul>
+			<div class="footer">
+				<ul class="footer-page clearfix">
+					<li class="page-item">
+						<a href="/index">
+							<i class="iconfont icon-index"></i>
+							<p>精选</p>
+						</a>
+					</li>
+					<li class="page-item">
+						<a href="/enlistment">
+							<i class="iconfont icon-computer"></i>
+							<p>征选</p>
+						</a>
+					</li>
+					<li class="page-item active">
+						<a href="/zlk">
+							<i class="iconfont icon-ask"></i>
+							<p>资料库</p>
+						</a>
+					</li>
+					<li class="page-item">
+						<a href="/personal">
+							<i class="iconfont icon-person1"></i>
+							<p>我的</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+	  <script src="js/jquery-1.10.2.min.js"></script>
+	  <script type="text/javascript" src="js/basic.js"></script>	
+      <script type="text/javascript" src="js/rem.js"></script>	
+	  <script>
+		   //删除文件的请求方法
+		   function del(filename){
+			var result = window.confirm(`确定要删除${filename}吗？`)
+			if(result){
+			window.location.href = `/del?file=${filename}`
+			}
+      		}
+
+			//下载文件的请求方法
+			function down(filename){
+				var url = `/down?fn=${filename}`
+				window.location.href = encodeURI(url) //处理中文参数
+			}
+	  </script>
+	</body>
+</html>

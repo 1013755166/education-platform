@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="css/slick.css" />
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css" />
+<title>学生征课</title>
+</head>
+<body>
+	<div class="header">
+		<span>学生征课</span>
+		<a href="/enlistment" class="back"><i class="iconfont icon-left"></i></a>
+	</div>
+	<form action="/student" method="post">
+		<ul class="dorm-book">
+			<li>
+				<span class="book-tit">用户名</span>
+				<input type="text" name="username" id="username"/>
+			</li>
+			<li>
+				<span class="book-tit">metamask</span>
+				<input type="text" name="metamask" id="metamask"/>
+			</li>
+			<li>
+				<span class="book-tit">授课年级</span>
+				<select class="form-control" id="grade" name="grade">
+					<option name="english">高中</option>
+					<option name="english">初中</option>
+					<option name="english">小学</option>
+					<option name="english">大学</option>
+					<option name="english">研究生</option>
+				</select>
+			</li>
+			<li>
+				<span class="book-tit">授课科目</span>
+				<select class="form-control" id="subject" name="subject">
+					<option name="english">英语</option>
+					<option name="math">数学</option>
+					<option name="chinese">语文</option>
+					<option name="chemistry">化学</option>
+					<option name="physics">物理</option>
+					<option name="geography">地理</option>
+					<option name="politics">政治</option>
+					<option name="biology">生物</option>
+					<option name="history">历史</option>
+				</select>
+			</li>
+			<li>
+				<span class="book-tit">竞拍开始时间</span>
+				<input type="date" name="starttime" id="starttime"/>
+				<span id="book-tit1">竞拍开始时间必填！</span>
+				<span id="book-tit5">开始时间要在截止时间后！</span>
+			</li>
+			<li>
+				<span class="book-tit">竞价截止时间</span>
+				<input type="date" name="endtime" id="endtime"/>
+				<span id="book-tit2">竞拍截止时间必填！</span>
+			</li>
+			<li>
+				<span class="book-tit">授课底价</span>
+				<input type="text" name="price" id="price" placeholder="请输入授课底价" />
+				<span id="book-tit3">授课底价必填！</span>
+			</li>
+			<li>
+				<span class="book-tit">授课时间</span>
+				<input type="date" name="classtime" id="classtime"/>
+				<span id="book-tit4">授课时间必填！</span>
+				<span id="book-tit6">授课时间要在竞价截止时间和开始时间后！</span>
+			</li>
+			<li>
+				<span class="book-tit">授课方式</span>
+				<select class="form-control" id="way" name="way">
+					<option name="online">线上授课</option>
+					<option name="offline">线下授课</option>
+				</select>
+			</li>
+			<h6 style="color: crimson;">注：线上授课则是在腾讯会议中授课，线下授课需您私聊授课老师，确定授课地点</h6>
+		</ul>
+		<div class="step-btn">
+			<input type="submit" value="发布" id="student" onclick="studentfunction()"/>
+		</div>
+	</form>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/basic.js"></script>
+	<script type="text/javascript" src="js/rem.js"></script>
+	<script type="text/javascript" src="js/student.js"></script>
+</body>
+</html>

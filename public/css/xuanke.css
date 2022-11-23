@@ -1,0 +1,25 @@
+.index-main[data-v-57509004] {
+    width: 100%;
+}
+
+li, ul {
+    display: block;
+}
+
+.index-list-item[data-v-57509004] {
+    position: relative;
+    float: left;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    margin-bottom: 20px;
+    width: 386px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    margin-right: 21px;
+}
+
+a:active, a:link {
+    outline: none;
+}

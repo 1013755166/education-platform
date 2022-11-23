@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css" />
+	<title>老师征课</title>
+</head>
+<body>
+	<div class="header">
+		<span>老师征课</span>
+		<a href="/enlistment" class="back"><i class="iconfont icon-left"></i></a>
+	</div>
+	<form action="/teacher" method="post">
+		<ul class="dorm-book">
+			<li>
+				<span class="book-tit">用户名</span>
+				<input type="text" name="username" id="username"/>
+			</li>
+			<li>
+				<span class="book-tit">metamask</span>
+				<input type="text" name="metamask" id="metamask"/>
+			</li>
+			<li>
+				<span class="book-tit">教学科目</span>
+				<select class="form-control" id="te_subject" name="te_subject">
+					<option name="english">英语</option>
+					<option name="math">数学</option>
+					<option name="chinese">语文</option>
+					<option name="chemistry">化学</option>
+					<option name="physics">物理</option>
+					<option name="geography">地理</option>
+					<option name="politics">政治</option>
+					<option name="biology">生物</option>
+					<option name="history">历史</option>
+				</select>
+			</li>
+			<li>
+				<span class="book-tit">教学年级</span>
+				<select class="form-control" id="te_grade" name="te_grade">
+					<option name="english">高中</option>
+					<option name="english">初中</option>
+					<option name="english">小学</option>
+					<option name="english">大学</option>
+					<option name="english">研究生</option>
+				</select>
+			</li>
+			<li>
+				<span class="book-tit">教学竞拍底价</span>
+				<input type="text" name="te_price" id="te_price" placeholder="请填写您本次的教学底价"/>
+				<span id="book-tit3">授课底价必填！</span>
+			</li>
+			<li>
+				<span class="book-tit">教学竞拍开始时间</span>
+				<input type="date" name="te_starttime" id="te_starttime"/>
+				<span id="book-tit1">竞拍开始时间必填！</span>
+				<span id="book-tit5">开始时间要在截止时间后！</span>
+			</li>
+			<li>
+				<span class="book-tit">教学竞价截止时间</span>
+				<input type="date" name="te_endtime" id="te_endtime"/>
+				<span id="book-tit2">竞拍截止时间必填！</span>
+			</li>
+			<li>
+				<span class="book-tit">授课时间</span>
+				<input type="date" name="te_classtime" id="te_classtime"/>
+				<span id="book-tit4">授课时间必填！</span>
+				<span id="book-tit6">授课时间要在竞价截止时间和开始时间后！</span>
+			</li>
+			<li>
+				<span class="book-tit">上课方式</span>
+				<select class="form-control" id="te_way" name="te_way">
+					<option name="online">线上授课</option>
+					<option name="offline">线下授课</option>
+				</select>
+			</li>
+		</ul>
+	
+		<!-- <div class="prove clearfix">
+			<p>
+				<span><img src="img/add.png" /></span>
+				<input type="file" class="upload-prove" />
+			</p>
+			<p>
+				<span><img src="img/add.png" /></span>
+				<input type="file" class="upload-prove" />
+			</p>
+		</div> -->
+		<div class="step-btn">
+			<input type="submit" value="发布" id="teacher" onclick="teacherfunction()"/>
+		</div>		
+	</form>	
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/basic.js"></script>
+<script type="text/javascript" src="js/rem.js"></script>
+<script type="text/javascript" src="js/teacher.js"></script>
+</body>
+</html>
